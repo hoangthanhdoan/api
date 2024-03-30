@@ -60,9 +60,17 @@
     },
     {
       "contactName": "Penny Wise",
-      "contactIcon": "https://i.ytimg.com/vi/SC7VAMorMcA/hq720_2.jpg",
+      "contactIcon": "https://globalnews.ca/wp-content/uploads/2016/07/pennywise-the-clown-it1.jpg?quality=85&strip=all&w=1200",
       "contactVideos": [
-        "https://www.youtube.com/shorts/SC7VAMorMcA"
+        "https://www.youtube.com/shorts/Mj7UsEBOv4s",
+        "https://www.youtube.com/shorts/UC5cguG3Y24",
+        "https://www.youtube.com/shorts/Ku3dMaWYx4M",
+        "https://www.youtube.com/shorts/1jNJ5jFQb7Y",
+        "https://www.youtube.com/shorts/86KNnSnvBnw",
+        "https://www.youtube.com/shorts/S-9XnmjRIMI",
+        "https://www.youtube.com/shorts/tSLAWyc6Z8I",
+        "https://www.youtube.com/shorts/rG9MnCAWzzg",
+        "https://www.youtube.com/shorts/ygfWzerSmv4"
       ],
       "questions": [
         ["hello 1", "hi 1"],
