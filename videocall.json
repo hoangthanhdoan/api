@@ -2,10 +2,12 @@
   "contacts": [
     {
       "contactName": "Scream Ghostface",
-      "contactIcon": "https://i.ytimg.com/vi/SC7VAMorMcA/hq720_2.jpg",
+      "contactIcon": "https://upload.wikimedia.org/wikipedia/en/thumb/a/ac/Ghostface.jpg/220px-Ghostface.jpg",
       "contactVideos": [
         "https://www.youtube.com/shorts/SC7VAMorMcA",
-        "https://www.youtube.com/shorts/SC7VAMorMcA"
+        "https://www.youtube.com/shorts/16V9wGgHcz4",
+        "https://www.youtube.com/shorts/UeeNG37b1XE",
+        "https://www.youtube.com/shorts/E2T8eIHePkw"
       ],
       "questions": [
         ["hello 1", "hi 1"],
