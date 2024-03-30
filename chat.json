@@ -1,0 +1,403 @@
+{
+  "contacts": [
+    {
+      "contactName": "Scream Ghostface",
+      "contactIcon": "scream_ghostface",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Valak",
+      "contactIcon": "valak",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Penny Wise",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Chucky",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Grim Reaper",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Frankenstein",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Jason Voorhees",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Michael Myers",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Joker",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "No Face",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Siren Head",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Sadako",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "M3gan",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Squid Game Doll",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Anabelle",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Jigsaw",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Wednesday",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Ghost",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Ghost",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Ghost",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    },
+    {
+      "contactName": "Ghost",
+      "contactIcon": "penny_wise",
+      "questions": [
+        ["hello 1", "hi 1"],
+        ["hello 2", "hi 2"],
+        ["hello 3", "hi 3"],
+        ["hello 4", "hi 4"],
+        ["hello 5", "hi 5"],
+        ["hello 6", "hi 6"],
+        ["hello 7", "hi 7"],
+        ["hello 8", "hi 8"],
+        ["hello 9", "hi 9"],
+        ["hello 10", "hi 10"],
+        ["hello 11", "hi 11"]
+      ],
+      "is_reward": false,
+      "is_premium": false
+    }
+  ]
+}
