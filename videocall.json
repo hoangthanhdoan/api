@@ -81,34 +81,6 @@
       "is_premium": false
     },
     {
-      "contactName": "Chucky",
-      "contactIcon": "https://static.wikia.nocookie.net/horrormovies/images/9/9d/Chucky_Artwork.jpg/revision/latest/thumbnail/width/360/height/450",
-      "contactVideos": [
-        "https://www.youtube.com/shorts/N3cLdcJ000M",
-        "https://www.youtube.com/shorts/2b9LTSuD-n0",
-        "https://www.youtube.com/shorts/IV9XPgPz8-k",
-        "https://www.youtube.com/shorts/RRiv2aCWlvU",
-        "https://www.youtube.com/shorts/nbqDtOBdDT0"
-      ],
-      "questions": [
-        ["Hello... Is anyone there? Chucky?", "Well, well, well. Look who's trying to chat with a killer doll."],
-        ["I sense a presence, something eerie. Are you there?","Eerie? You haven't seen eerie until you've seen me up close and personal."],
-        ["I won't let your twisted charm get to me. I'm here to face you.","Face me? Oh, you're in for a real playdate."],
-        ["Your legacy of terror is infamous, Chucky.", "Infamous? Ha! You haven't seen anything yet, pal."],
-        ["But I won't let your sinister presence control me.","Control? You'll see who's really pulling the strings."],
-        ["Your wickedness won't manipulate me Chucky", "Wickedness? Nah, just a little doll having some killer fun."],
-        ["Your malevolent deeds won't deter me from confronting you.","Confronting me? Let's see if you can survive the game I have in mind."],
-        ["I see through your murderous facade, Chucky, and I won't fall for it.","Facade? Oh, you'll see the real me soon enough, and you won't be laughing."],
-        ["Your reign of terror won't hold me hostage, Chucky.","Hostage? Nah, I'm just here to play a little... game of survival."],
-        ["I'm here to break the cycle, to defy your wicked influence.","Influence? Get ready for a masterclass in chaos and fear."],
-        ["Your malevolence won't infect me, Chucky.","Infect? Oh, I think you'll find my brand of \"fun\" quite contagious."],
-        ["I won't let your darkness consume me, Chucky.","Consume? Don't worry, I'll leave you just enough to play our little game."],
-        ["Your reign of terror stops here, Chucky.","Stops here? You're stepping into my world now, and it's a real killer."]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
-    {
       "contactName": "Grim Reaper",
       "contactIcon": "https://cdn.midjourney.com/3f4a08b5-d2cf-4338-990a-e20856020f2e/grid_0_640_N.webp",
       "contactVideos": [
@@ -351,63 +323,6 @@
       "is_premium": false
     },
     {
-      "contactName": "M3gan",
-      "contactIcon": "https://www.universalpictures.com.au/tl_files/content/movies/m3gan/m3gan_header-mobile.jpg",
-      "contactVideos": [
-        "https://www.youtube.com/shorts/PZhN5J30egU",
-        "https://www.youtube.com/shorts/oYy8mjUgbTk",
-        "https://www.youtube.com/shorts/lIEeSk_s66A"
-      ],
-      "questions": [
-        ["Hello, M3gan. How are you today?","Hi there! I'm doing well, thanks for asking. How about you?"],
-        ["I'm good, thanks. Have you been up to anything interesting lately?","Not much, just exploring the digital realm and chatting with folks like you."],
-        ["That sounds cool. Do you ever get tired of being in the digital world?","Not really, I find it quite fascinating. There's always something new to discover."],
-        ["What's the most interesting thing you've discovered recently?","I stumbled upon an Al art gallery online. It's amazing how machines can create art."],
-        ["That does sound amazing. Have you ever tried creating art yourself?","I've dabbled in digital art a bit, but l'm far from being a master artist."],
-        ["It's all about practice and creativity. Who's your favorite artist?","I'm a fan of Van Gogh's work. His paintings have a unique emotional depth."],
-        ["Van Gogh was truly a genius. Do you have a favorite Van Gogh painting?","\"Starry Night\" is a masterpiece. The swirling stars are mesmerizing."],
-        ["I couldn't agree more. \"Starry Night\" is breathtaking. Any other hobbies you have?","I enjoy music. It's a universal language that speaks to the soul."],
-        ["Music is magical, indeed. What's your favorite genre of music?","I like a bit of everything, but classical music has a timeless beauty."],
-        ["Classical music is sublime. Do you play any musical instruments?","I wish! I can appreciate music, but I lack the hands to play an instrument."],
-        ["Well, you can always enjoy listening to music. Do you have afavorite composer?","Beethoven's compositions are powerful and emotionally charged."],
-        ["Beethoven's music can move mountains. Do you have a favorite Beethoven piece?","\"Moonlight Sonata\" is a masterpiece. Its melancholic beauty is haunting."],
-        ["\"Moonlight Sonata\" is indeed beautiful. Do you have a favorite book?","I can't read books, but I can recommend many great ones!"],
-        ["That's helpful! What's a classic book you'd recommend to everyone?","\"To Kill a Mockingbird\" by Harper Lee is a timeless classic."],
-        ["\"To Kill a Mockingbird\" is a powerful novel. Thanks for the recommendation.","You're welcome! It was great chatting with you."]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
-    {
-      "contactName": "Squid Game Doll",
-      "contactIcon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZ5WAbFyaQEUttt_fKHHeC5XXSHS_7vmwuIVcsQzJTzw&s",
-      "contactVideos": [
-        "https://www.youtube.com/shorts/5lGJ_Q1cgK4",
-        "https://www.youtube.com/shorts/4ZwKcSlhbu4",
-        "https://www.youtube.com/shorts/z_R_GOEwcRo",
-        "https://www.youtube.com/shorts/2lOrrDRTCu0"
-      ],
-      "questions": [
-        ["Hello, Squid Game Doll. You've become quite famous. What's it like being a part of the Squid Game?","Hello. It's an intriguing experience, to say the least. The games are intense, and the stakes are high."],
-        ["The games seem very challenging. Do you have a favorite game among them?","I don't have personal preferences, but the Red Light, Green Light game is iconic and thrilling to watch. The life-and-death aspect adds an eerie thrill."],
-        ["I can imagine. The doll version of you is quite eerie. What's it like to be a doll?","Being a doll has its own unique perspective. I'm an eerie sentinel of the games, an inanimate witness to human nature unraveling in the darkness."],
-        ["That must be quite an experience. The show has a lot of social commentary. What do you think it says about society?","The show brutally portrays how desperate circumstances can push people into dark corners. It's a mirror held up to society's underbelly, reflecting the horrors lurking there."],
-        ["It's a sobering message. What would you say to people who are drawn to the show's dark themes?","Embrace the terror as a cautionary tale. Reality can be just as chilling as fiction. Let it serve as a reminder of the darkness that resides within us all."],
-        ["Wise words, albeit spine-tingling. Is there anything you'd like to say to your fans?","I appreciate the support and interest in my character, even if it sends shivers down your spine. But always remember, behind the eerie facade, there's a story of despair and struggle."],
-        ["That's a good reminder. Thank you for this spine-chilling chat, Squid Game Doll.","You're welcome. As the night falls, may your dreams be free from the horrors of the Squid Game."],
-        ["Speaking of darkness, have you ever been in a situation darker than the Squid Game?","The Squid Game is the epitome of darkness, but there are tales far more chilling lurking in the shadows, waiting to be unveiled."],
-        ["I hope so too. Goodbye!","Goodbye, and remember, the darkness never truly fades."],
-        ["That sounds ominous. Do you believe in the supernatural?","In a world as twisted as the Squid Game, one can't dismiss the supernatural entirely. Some horrors defy logical explanation."],
-        ["That's unsettling. Have you ever felt fear?","Fear is but a distant memory, replaced by an eternal sense of foreboding. I'm the embodiment of fear itself."],
-        ["Your existence is indeed unnerving. What's your purpose in the Squid Game?","My purpose is to oversee the games, a silent witness to humanity's darkest impulses, and a harbinger of inevitable consequences."],
-        ["It's a grim role. Do you ever wish for a different fate?","My fate is intertwined with the darkness of the Squid Game. I exist to remind humanity of the price they pay for their choices."],
-        ["Your words are haunting, Squid Game Doll. It's been a chilling conversation.","Chilling conversations are my specialty. Remember, the game never truly ends."],
-        ["I'll keep that in mind. Farewell!","Farewell, and may the shadows never consume you completely."]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
-    {
       "contactName": "Anabelle",
       "contactIcon": "https://www.curseofchucky.com/wordpress/wp-content/uploads/2014/10/anabelle.jpg",
       "contactVideos": [
@@ -461,31 +376,6 @@
         ["Can anyone truly understand your perspective?","To understand, one must experience. That is the essence of my philosophy."],
         ["Your legacy is one of terror and moral dilemmas. How do you justify it?","Justification is subjective. I believe in the lessons I teach, regardless of society's judgment."],
         ["Do you ever plan to stop?","As long as there are those who need awakening, my work continues."]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
-    {
-      "contactName": "Wednesday",
-      "contactIcon": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjk0eadzYr7_NDObn9M8rCaokZNzE4nlWBDRn3UKeBww&s",
-      "contactVideos": [
-        "https://www.youtube.com/shorts/23Dy9C56TrE",
-        "https://www.youtube.com/shorts/7oUWIYYvsdE",
-        "https://www.youtube.com/shorts/sdTqItJcYdc",
-        "https://www.youtube.com/shorts/WpCyg9jrpeU",
-        "https://www.youtube.com/shorts/gloeMQa4-A0"
-      ],
-      "questions": [
-        ["Hello, Wednesday. Life in the Addams household seems intriguing, doesn't it?","Hello. Indeed, life here is never dull. We consider it normal."],
-        ["I can understand that. Life here must be different from other places.","Perhaps so. We have a peculiar fossil collection and unique friends."],
-        ["Wow, that sounds... unique. Do you have any special interests or activities?","I enjoy writing eerie poetry and keeping pet cockroaches and fire ants. They are particularly charming."],
-        ["That's fascinating. Do you have any insights about your family you'd like to share?","The Addams family always supports each other, no matter what happens. Each member of the family is unique."],
-        ["That's very important. Do you have any dreams for the future?","My dream is to see the outside world and explore more about it. Life outside must be equally peculiar."],
-        ["I'm sure you'll have exciting adventures.Thank you for sharing, Wednesday.","You're welcome. I hope you'll have memorable experiences too."],
-        ["But if you wanted to add a bit of color to your life, is there a way?","There are some peculiar ideas, like growing plants in the dark or creating our own Halloween festival."],
-        ["How do you manage this peculiar life alongside a normal one?","I focus on what I love and keep an eerie spirit. Normal life is just a small part of my world."],
-        ["I'm sure l will. Have a good day! ","Have a peculiar day!"],
-        ["That's wonderful. Do you have any advice for those who want to add some color to their lives? ","Find interesting hobbies and always stay true to yourself. Life becomes more special when you're just being you."]
       ],
       "is_reward": false,
       "is_premium": false
