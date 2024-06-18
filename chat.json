@@ -247,65 +247,9 @@
       "is_reward": false,
       "is_premium": false
     },
-    {
-      "contactName": "Squid Game Doll",
-      "contactIcon": "penny_wise",
-      "questions": [
-        ["hello 1", "hi 1"],
-        ["hello 2", "hi 2"],
-        ["hello 3", "hi 3"],
-        ["hello 4", "hi 4"],
-        ["hello 5", "hi 5"],
-        ["hello 6", "hi 6"],
-        ["hello 7", "hi 7"],
-        ["hello 8", "hi 8"],
-        ["hello 9", "hi 9"],
-        ["hello 10", "hi 10"],
-        ["hello 11", "hi 11"]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
-    {
-      "contactName": "Anabelle",
-      "contactIcon": "penny_wise",
-      "questions": [
-        ["hello 1", "hi 1"],
-        ["hello 2", "hi 2"],
-        ["hello 3", "hi 3"],
-        ["hello 4", "hi 4"],
-        ["hello 5", "hi 5"],
-        ["hello 6", "hi 6"],
-        ["hello 7", "hi 7"],
-        ["hello 8", "hi 8"],
-        ["hello 9", "hi 9"],
-        ["hello 10", "hi 10"],
-        ["hello 11", "hi 11"]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
+    
     {
       "contactName": "Jigsaw",
-      "contactIcon": "penny_wise",
-      "questions": [
-        ["hello 1", "hi 1"],
-        ["hello 2", "hi 2"],
-        ["hello 3", "hi 3"],
-        ["hello 4", "hi 4"],
-        ["hello 5", "hi 5"],
-        ["hello 6", "hi 6"],
-        ["hello 7", "hi 7"],
-        ["hello 8", "hi 8"],
-        ["hello 9", "hi 9"],
-        ["hello 10", "hi 10"],
-        ["hello 11", "hi 11"]
-      ],
-      "is_reward": false,
-      "is_premium": false
-    },
-    {
-      "contactName": "Wednesday",
       "contactIcon": "penny_wise",
       "questions": [
         ["hello 1", "hi 1"],
