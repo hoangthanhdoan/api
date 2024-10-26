@@ -189,7 +189,7 @@ class TDRecognition {
                 if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
                 this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
                 this.recognition.stop();
-            }, 2000); // 5 giây im lặng
+            }, 3000); // 5 giây im lặng
         }
     }
 
