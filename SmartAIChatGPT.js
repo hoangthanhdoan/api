@@ -187,7 +187,7 @@ class TDRecognition {
             this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
             if (this.onDetectedKeyword) this.onDetectedKeyword(this.detectKeyword);
             //this.recognition.stop();
-            this.DetectedKeyWordSectionId = -1;
+            //this.DetectedKeyWordSectionId = -1;
             return;
         }
         // Ghi âm nội dung nếu đã nhận diện từ khóa
