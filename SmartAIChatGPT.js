@@ -121,7 +121,8 @@ class TDRecognition {
         
         this.recognition = new SpeechRecognition();
         window.recognition = this.recognition;
-        
+
+        this.sectionID = 0;
         this.recognition.lang = 'vi-VN';
         this.recognition.interimResults = true;
         this.recognition.continuous = true;
@@ -150,6 +151,8 @@ class TDRecognition {
     }
 
     handleStart() {
+        this.sectionID += 1;
+        this.DetectedKeyWordSectionId = this.sectionID;
         if (this.onStart) this.onStart();
         console.log("Recognition started...");
         this.isRecognitionActive = true;
@@ -157,19 +160,21 @@ class TDRecognition {
 
     handleResult(event) {
         if (!this.isRecognitionActive) return;
+        if (!this.DetectedKeyWordSectionId = this.sectionID) return;
 
         var transcript = event.results[0][0].transcript.trim().toLowerCase();
         this.transcript = transcript;
         clearTimeout(this.silenceTimer);
         // Kiểm tra nếu có từ khóa trong nội dung đã nhận diện
         if (this.keywords.some(keyword => transcript.includes(keyword)) && !this.isListeningForContent) {
+            
             TDLog("Detected keyword. Starting to listen for content...");
             
             this.isListeningForContent = true;
             this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
             if (this.onDetectedKeyword) this.onDetectedKeyword(this.detectKeyword);
             this.recognition.stop();
-            recognition;
+            this.DetectedKeyWordSectionId = -1;
             return;
         }
         // Ghi âm nội dung nếu đã nhận diện từ khóa
@@ -179,11 +184,12 @@ class TDRecognition {
             // Đặt lại timer khi có tiếng nói
             clearTimeout(this.silenceTimer);
             this.silenceTimer = setTimeout(() => {
-                console.log("No speech for 3 seconds. Finalizing content...");
+                this.DetectedKeyWordSectionId = -1;
+                TDLog("No speech for 2 seconds. Finalizing content...");
                 if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
                 this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
                 this.recognition.stop();
-            }, 3000); // 5 giây im lặng
+            }, 2000); // 5 giây im lặng
         }
     }
 
