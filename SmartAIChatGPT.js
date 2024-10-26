@@ -1,11 +1,5 @@
 
-window.TDLog = function(message){
-    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.iosHandler){
-        window.webkit.messageHandlers.iosHandler.postMessage(message);
-    }else{
-        console.log(message);
-    }
-}
+
 
 window.getLastAudioButton = function(){
     const buttons = document.querySelectorAll('button.rounded-lg.text-token-text-secondary[aria-label="Read aloud"][data-testid="voice-play-turn-action-button"]');
@@ -114,7 +108,13 @@ function playBeep() {
 //sendMessage("Bạn có thể làm gì cho tôi");
 
 
-
+window.TDLog = function(message){
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.iosHandler){
+        window.webkit.messageHandlers.iosHandler.postMessage(message);
+    }else{
+        console.log(message);
+    }
+}
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 class TDRecognition {
     constructor(keywords, onStart, onTalking, onDetectedKeyword, onEnd, onError, onListened) {
@@ -160,7 +160,7 @@ class TDRecognition {
 
     handleResult(event) {
         if (!this.isRecognitionActive) return;
-        if (!this.DetectedKeyWordSectionId = this.sectionID) return;
+        if (!this.DetectedKeyWordSectionId == this.sectionID) return;
 
         var transcript = event.results[0][0].transcript.trim().toLowerCase();
         this.transcript = transcript;
