@@ -234,4 +234,4 @@ setInterval(function() {
         console.log("Nhận diện không hoạt động, khởi động lại...");
         recognition.start();
     }
-}, 1000); // Kiểm tra mỗi 1 giây
+}, 500); // Kiểm tra mỗi 1 giây
