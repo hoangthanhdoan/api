@@ -1,5 +1,5 @@
 
-window.isDebug = true;
+window.isDebug = false;
 
 window.getLastAudioButton = function(){
     const buttons = document.querySelectorAll('button.rounded-lg.text-token-text-secondary[aria-label="Read aloud"][data-testid="voice-play-turn-action-button"]');
