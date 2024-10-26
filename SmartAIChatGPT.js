@@ -214,7 +214,7 @@ const recognition = new TDRecognition(
     function(keyword) {playBeep()},
     () => console.log("OnEnd: Nhận diện kết thúc."),
     (error) => console.log("OnError: Lỗi nhận diện - " + error),
-    function(capturedText, keyword){GPTSendMessage(message)}
+    function(capturedText, keyword){GPTSendMessage(capturedText)}
 );
 
 setInterval(function() {
