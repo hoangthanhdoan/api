@@ -186,8 +186,10 @@ class TDRecognition {
             this.isListeningForContent = true;
             this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
             if (this.onDetectedKeyword) this.onDetectedKeyword(this.detectKeyword);
-            //this.recognition.stop();
-            //this.DetectedKeyWordSectionId = -1;
+            this.recognition.stop();
+            this.recognition.interimResults = false;
+            this.recognition.continuous = false;
+            this.DetectedKeyWordSectionId = -1;
             return;
         }
         // Ghi âm nội dung nếu đã nhận diện từ khóa
@@ -223,6 +225,9 @@ class TDRecognition {
     }
 
     start() {
+        
+        this.recognition.interimResults = !this.isListeningForContent;
+        this.recognition.continuous = !this.isListeningForContent;
         this.recognition.start();
     }
 
