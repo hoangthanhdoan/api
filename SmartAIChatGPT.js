@@ -225,9 +225,9 @@ class TDRecognition {
     }
 
     start() {
-        
         this.recognition.interimResults = !this.isListeningForContent;
         this.recognition.continuous = !this.isListeningForContent;
+        TDLog("HOANG THANH DOAN this.isListeningForContent: " + this.isListeningForContent)
         this.recognition.start();
     }
 
