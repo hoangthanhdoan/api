@@ -202,7 +202,7 @@ class TDRecognition {
                 this.DetectedKeyWordSectionId = -1;
                 if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
                 this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
-                this.recognition.stop();
+                //this.recognition.stop();
                 return;
             }
             // Đặt lại timer khi có tiếng nói
