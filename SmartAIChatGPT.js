@@ -1,5 +1,11 @@
 
-
+window.TDLog = function(message){
+    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.iosHandler){
+        window.webkit.messageHandlers.iosHandler.postMessage(message);
+    }else{
+        console.log(message);
+    }
+}
 
 window.getLastAudioButton = function(){
     const buttons = document.querySelectorAll('button.rounded-lg.text-token-text-secondary[aria-label="Read aloud"][data-testid="voice-play-turn-action-button"]');
@@ -157,7 +163,7 @@ class TDRecognition {
         clearTimeout(this.silenceTimer);
         // Kiểm tra nếu có từ khóa trong nội dung đã nhận diện
         if (this.keywords.some(keyword => transcript.includes(keyword)) && !this.isListeningForContent) {
-            console.log("Detected keyword. Starting to listen for content...");
+            TDLog("Detected keyword. Starting to listen for content...");
             
             this.isListeningForContent = true;
             this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
@@ -168,7 +174,7 @@ class TDRecognition {
         }
         // Ghi âm nội dung nếu đã nhận diện từ khóa
         else if (this.isListeningForContent) {
-            console.log("Recognized: " + transcript);
+            TDLog("Recognized: " + transcript);
             if (this.onTalking) this.onTalking(transcript);
             // Đặt lại timer khi có tiếng nói
             clearTimeout(this.silenceTimer);
@@ -183,7 +189,7 @@ class TDRecognition {
 
     handleError(event) {
         if (this.onError) this.onError(event.error);
-        console.log("Recognition error: " + event.error);
+        TDLog("Recognition error: " + event.error);
         this.isListeningForContent = false;
         this.isRecognitionActive = false;
     }
@@ -191,7 +197,7 @@ class TDRecognition {
     handleEnd() {
         if (this.onEnd) this.onEnd();
         clearTimeout(this.silenceTimer);
-        console.log("Recognition ended...");
+        TDLog("Recognition ended...");
         this.isRecognitionActive = false;
     }
 
@@ -211,10 +217,10 @@ const recognition = new TDRecognition(
     ["cho tôi hỏi", "xin chào"],
     function(){},
     function(message) {GPTTyping(message)},
-    function(keyword) {playBeep(); GPTCancel();},
-    () => console.log("OnEnd: Nhận diện kết thúc."),
-    (error) => console.log("OnError: Lỗi nhận diện - " + error),
-    function(capturedText, keyword){GPTSendMessage(capturedText)}
+    function(keyword) {playBeep(); GPTCancel();TDLog("turnOffSystemSound");},
+    () => TDLog("OnEnd: Nhận diện kết thúc."),
+    function(error){TDLog("OnError: Lỗi nhận diện - " + error); TDLog("turnOnSystemSound");},
+    function(capturedText, keyword){GPTSendMessage(capturedText); TDLog("turnOnSystemSound");}
 );
 
 setInterval(function() {
