@@ -238,9 +238,7 @@ const recognition = new TDRecognition(
     ["cho tôi hỏi"],
     function(){},
     function(message) {GPTTyping(message)},
-    function(keyword) {GPTCancel(); setTimeout(() => {
-            playBeep();TDLog("turnOffSystemSound");
-            }, 1000); },
+    function(keyword) {GPTCancel(); playBeep();TDLog("turnOffSystemSound");},
     () => TDLog("OnEnd: Nhận diện kết thúc."),
     function(error){TDLog("OnError: Lỗi nhận diện - " + error); TDLog("turnOnSystemSound");},
     function(capturedText, keyword){GPTSendMessage(capturedText); TDLog("turnOnSystemSound");}
