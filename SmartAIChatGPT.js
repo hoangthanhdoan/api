@@ -211,7 +211,7 @@ const recognition = new TDRecognition(
     ["cho tôi hỏi", "xin chào"],
     function(){},
     function(message) {GPTTyping(message)},
-    function(keyword) {playBeep()},
+    function(keyword) {playBeep(); GPTCancel();},
     () => console.log("OnEnd: Nhận diện kết thúc."),
     (error) => console.log("OnError: Lỗi nhận diện - " + error),
     function(capturedText, keyword){GPTSendMessage(capturedText)}
