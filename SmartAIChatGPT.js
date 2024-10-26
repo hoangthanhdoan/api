@@ -108,6 +108,21 @@ function playBeep() {
 //sendMessage("Bạn có thể làm gì cho tôi");
 
 
+function removeTextBeforeKeyword(text) {
+    // Tìm vị trí cuối cùng của cụm từ "cho tôi hỏi"
+    const keyword = "cho tôi hỏi";
+    const index = text.lastIndexOf(keyword);
+
+    // Kiểm tra nếu cụm từ có tồn tại trong chuỗi
+    if (index !== -1) {
+        // Cắt chuỗi từ sau vị trí "cho tôi hỏi" cuối cùng
+        return text.substring(index + keyword.length).trim();
+    }
+    
+    // Nếu không tìm thấy cụm từ, trả về chuỗi gốc
+    return text;
+}
+
 window.TDLog = function(message){
     if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.iosHandler){
         window.webkit.messageHandlers.iosHandler.postMessage(message);
@@ -167,20 +182,20 @@ class TDRecognition {
         clearTimeout(this.silenceTimer);
         // Kiểm tra nếu có từ khóa trong nội dung đã nhận diện
         if (this.keywords.some(keyword => transcript.includes(keyword)) && !this.isListeningForContent) {
-            
             TDLog("Detected keyword. Starting to listen for content...");
-            
             this.isListeningForContent = true;
             this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
             if (this.onDetectedKeyword) this.onDetectedKeyword(this.detectKeyword);
-            this.recognition.stop();
+            //this.recognition.stop();
             this.DetectedKeyWordSectionId = -1;
             return;
         }
         // Ghi âm nội dung nếu đã nhận diện từ khóa
         else if (this.isListeningForContent) {
-            TDLog("Recognized: " + transcript);
-            if (this.onTalking) this.onTalking(transcript);
+            var finalTranscript = removeTextBeforeKeyword(transcript);
+            this.transcript = finalTranscript;
+            TDLog("Recognized: " + finalTranscript);
+            if (this.onTalking) this.onTalking(finalTranscript);
             // Đặt lại timer khi có tiếng nói
             clearTimeout(this.silenceTimer);
             this.silenceTimer = setTimeout(() => {
