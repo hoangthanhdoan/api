@@ -1,5 +1,5 @@
 
-
+window.isDebug = true;
 
 window.getLastAudioButton = function(){
     const buttons = document.querySelectorAll('button.rounded-lg.text-token-text-secondary[aria-label="Read aloud"][data-testid="voice-play-turn-action-button"]');
@@ -13,6 +13,7 @@ window.getLastAudioButtonIsPlaying = function(){
 //vc-record-button
 //const buttons = document.querySelectorAll('button[id="vc-record-button"]');
 window.GPTCancel = function(){
+    if (isDebug) return;
     try{
         getLastAudioButtonIsPlaying().click();
     }catch(ex){}
@@ -30,6 +31,7 @@ window.GPTCancel = function(){
 }
 
 window.GPTTyping = function(message){
+    if (isDebug) return;;
     const richTextArea = document.querySelector('div[contenteditable]');
 
     if (richTextArea) {
@@ -44,7 +46,7 @@ window.GPTTyping = function(message){
 }
 
 window.GPTSendMessage = function(message){
-
+    if (isDebug) return;;
     const richTextArea = document.querySelector('div[contenteditable]');
 
     if (richTextArea) {
@@ -174,10 +176,12 @@ class TDRecognition {
     }
 
     handleResult(event) {
+        var transcript = event.results[0][0].transcript.trim().toLowerCase();
+        TDLog("Recognized: " + transcript);
         if (!this.isRecognitionActive) return;
         if (!this.DetectedKeyWordSectionId == this.sectionID) return;
 
-        var transcript = event.results[0][0].transcript.trim().toLowerCase();
+        
         this.transcript = transcript;
         clearTimeout(this.silenceTimer);
         // Kiểm tra nếu có từ khóa trong nội dung đã nhận diện
@@ -187,8 +191,6 @@ class TDRecognition {
             this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
             if (this.onDetectedKeyword) this.onDetectedKeyword(this.detectKeyword);
             this.recognition.stop();
-            this.recognition.interimResults = false;
-            this.recognition.continuous = false;
             this.DetectedKeyWordSectionId = -1;
             return;
         }
@@ -198,29 +200,30 @@ class TDRecognition {
             this.transcript = finalTranscript;
             TDLog("Recognized: " + finalTranscript);
             if (this.onTalking) this.onTalking(finalTranscript);
-            if (!this.recognition.continuous){
+            // if (!this.recognition.continuous)
+            {
                 this.DetectedKeyWordSectionId = -1;
                 if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
                 this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
                 //this.recognition.stop();
                 return;
             }
-            // Đặt lại timer khi có tiếng nói
-            clearTimeout(this.silenceTimer);
-            this.silenceTimer = setTimeout(() => {
-                this.DetectedKeyWordSectionId = -1;
-                TDLog("No speech for 2 seconds. Finalizing content...");
-                if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
-                this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
-                this.recognition.stop();
-            }, 3000); // 5 giây im lặng
+            // // Đặt lại timer khi có tiếng nói
+            // clearTimeout(this.silenceTimer);
+            // this.silenceTimer = setTimeout(() => {
+            //     this.DetectedKeyWordSectionId = -1;
+            //     TDLog("No speech for 2 seconds. Finalizing content...");
+            //     if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
+            //     this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
+            //     this.recognition.stop();
+            // }, 3000); // 5 giây im lặng
         }
     }
 
     handleError(event) {
         if (this.onError) this.onError(event.error);
         TDLog("Recognition error: " + event.error);
-        this.isListeningForContent = false;
+        //this.isListeningForContent = false;
         this.isRecognitionActive = false;
     }
 
@@ -261,4 +264,4 @@ setInterval(function() {
         console.log("Nhận diện không hoạt động, khởi động lại...");
         recognition.start();
     }
-}, 500); // Kiểm tra mỗi 1 giây
+}, 1000); // Kiểm tra mỗi 1 giây
