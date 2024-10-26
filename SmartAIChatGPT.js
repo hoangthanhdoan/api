@@ -138,7 +138,7 @@ class TDRecognition {
         window.recognition = this.recognition;
 
         this.sectionID = 0;
-        //this.recognition.lang = 'vi-VN';
+        this.recognition.lang = 'vi-VN';
         this.recognition.interimResults = true;
         this.recognition.continuous = true;
 
