@@ -220,7 +220,7 @@ class TDRecognition {
 
 // Khởi tạo lớp với danh sách từ khóa và các sự kiện
 const recognition = new TDRecognition(
-    ["cho tôi hỏi", "xin chào"],
+    ["cho tôi hỏi"],
     function(){},
     function(message) {GPTTyping(message)},
     function(keyword) {GPTCancel(); setTimeout(() => {
