@@ -198,6 +198,13 @@ class TDRecognition {
             this.transcript = finalTranscript;
             TDLog("Recognized: " + finalTranscript);
             if (this.onTalking) this.onTalking(finalTranscript);
+            if (!this.recognition.continuous){
+                this.DetectedKeyWordSectionId = -1;
+                if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
+                this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
+                this.recognition.stop();
+                return;
+            }
             // Đặt lại timer khi có tiếng nói
             clearTimeout(this.silenceTimer);
             this.silenceTimer = setTimeout(() => {
