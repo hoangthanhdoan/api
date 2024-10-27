@@ -126,11 +126,11 @@ function removeTextBeforeKeyword(text) {
 }
 
 window.TDLog = function(message){
-    if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.iosHandler){
-        window.webkit.messageHandlers.iosHandler.postMessage(message);
-    }else{
-        console.log(message);
-    }
+    // if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.iosHandler){
+    //     window.webkit.messageHandlers.iosHandler.postMessage(message);
+    // }else{
+    //     //console.log(message);
+    // }
 }
 var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
 class TDRecognition {
@@ -168,6 +168,7 @@ class TDRecognition {
     }
 
     handleStart() {
+        this.transcript = "";
         this.sectionID += 1;
         this.DetectedKeyWordSectionId = this.sectionID;
         if (this.onStart) this.onStart();
@@ -176,46 +177,63 @@ class TDRecognition {
     }
 
     handleResult(event) {
-        var transcript = event.results[0][0].transcript.trim().toLowerCase();
-        TDLog("Recognized: " + transcript);
+        var temptranscript = "";
+        this.transcript = "";
+        var isFinal = false;
+        for (let s = event.resultIndex; s < event.results.length; ++s){
+            if (event.results[s].isFinal){
+                isFinal = true;
+                this.transcript += event.results[s][0].transcript.toLowerCase();
+            }else{
+                temptranscript += event.results[s][0].transcript.toLowerCase();
+            }
+        }
+
+
+        
+
+        TDLog("Recognized: " + temptranscript);
         if (!this.isRecognitionActive) return;
         if (!this.DetectedKeyWordSectionId == this.sectionID) return;
 
         
-        this.transcript = transcript;
+        // this.transcript = transcript;
         clearTimeout(this.silenceTimer);
+
+
         // Kiểm tra nếu có từ khóa trong nội dung đã nhận diện
-        if (this.keywords.some(keyword => transcript.includes(keyword)) && !this.isListeningForContent) {
+        if (this.keywords.some(keyword => temptranscript.includes(keyword)) && !this.isListeningForContent) {
             TDLog("Detected keyword. Starting to listen for content...");
             this.isListeningForContent = true;
-            this.detectKeyword = this.keywords.find(keyword => transcript.includes(keyword));
+            this.detectKeyword = this.keywords.find(keyword => temptranscript.includes(keyword));
             if (this.onDetectedKeyword) this.onDetectedKeyword(this.detectKeyword);
-            this.recognition.stop();
+            // this.recognition.stop();
             this.DetectedKeyWordSectionId = -1;
             return;
         }
         // Ghi âm nội dung nếu đã nhận diện từ khóa
-        else if (this.isListeningForContent) {
-            var finalTranscript = removeTextBeforeKeyword(transcript);
-            this.transcript = finalTranscript;
-            TDLog("Recognized: " + finalTranscript);
+        if (isFinal && this.isListeningForContent) {
+            var finalTranscript = removeTextBeforeKeyword(this.transcript);
             if (this.onTalking) this.onTalking(finalTranscript);
+            this.finalTranscript = finalTranscript;
+            TDLog("Recognized: " + finalTranscript);
+            
             // if (!this.recognition.continuous)
-            {
-                this.DetectedKeyWordSectionId = -1;
-                if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
-                this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
-                //this.recognition.stop();
-                return;
-            }
-            // // Đặt lại timer khi có tiếng nói
-            // clearTimeout(this.silenceTimer);
-            // this.silenceTimer = setTimeout(() => {
+            // {
             //     this.DetectedKeyWordSectionId = -1;
-            //     TDLog("No speech for 2 seconds. Finalizing content...");
             //     if (this.onListened) this.onListened(this.transcript.trim(), this.detectKeyword);
             //     this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
-            //     this.recognition.stop();
+            //     //this.recognition.stop();
+            //     return;
+            // }
+            // Đặt lại timer khi có tiếng nói
+            // clearTimeout(this.silenceTimer);
+            // this.silenceTimer = setTimeout(() => {
+                this.DetectedKeyWordSectionId = -1;
+                TDLog("No speech for 2 seconds. Finalizing content...");
+                if (this.onListened) this.onListened(this.finalTranscript.trim(), this.detectKeyword);
+                this.isListeningForContent = false; // Quay về trạng thái chờ từ khóa
+                //this.recognition.stop();
             // }, 3000); // 5 giây im lặng
         }
     }
@@ -235,8 +253,8 @@ class TDRecognition {
     }
 
     start() {
-        this.recognition.interimResults = !this.isListeningForContent;
-        this.recognition.continuous = !this.isListeningForContent;
+        this.recognition.interimResults = true;//!this.isListeningForContent;
+        this.recognition.continuous = true;//!this.isListeningForContent;
         TDLog("HOANG THANH DOAN this.isListeningForContent: " + this.isListeningForContent)
         this.recognition.start();
     }
@@ -256,7 +274,7 @@ const recognition = new TDRecognition(
     function(keyword) {GPTCancel(); playBeep();TDLog("turnOffSystemSound");},
     () => TDLog("OnEnd: Nhận diện kết thúc."),
     function(error){TDLog("OnError: Lỗi nhận diện - " + error); TDLog("turnOnSystemSound");},
-    function(capturedText, keyword){GPTSendMessage(capturedText); TDLog("turnOnSystemSound");}
+    function(capturedText, keyword){playBeep();GPTSendMessage(capturedText); TDLog("turnOnSystemSound");}
 );
 
 setInterval(function() {
